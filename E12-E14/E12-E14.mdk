@@ -1,0 +1,19 @@
+Package: siunitx
+Tex Header: \sisetup{output-decimal-marker = {,}} 
+Title         : E12 - E14
+Author        : Gerald Rapior
+Logo          : True
+
+[TITLE]
+
+# E12 Netzgleichrichter
+
+| $U_{\text{a, soll}} (\si{\volt})$ | $U_{\text{Tr}} (\si{\volt})$ | $C_L (\si{\micro\farad})$ | $R_S (\Omega)$ |
++:--------------------+:---------------+:------+:---------+
+| 18                  | 15,5           | 400   | 15 -16   |
+| 16                  | 13,63          | 300   | 14       |
+| 14                  | 12,24          | 400   | 12       |
+| 12                  | 11,18          | 800   | 11       |
+| 10                  | 9,1            | 500   | 9        |
+
+
