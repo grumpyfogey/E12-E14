@@ -12,7 +12,7 @@ Schaltplan zur Messung der Diodenkennlinien verändert.
 
 ![MessDiodenkennlinie]
 
-[MessDiodenkennlinie]: https://github.com/grumpyfogey/E12-E14/blob/master/MessungDiodenkennlinie.pdf
+[MessDiodenkennlinie]: https://github.com/grumpyfogey/E12-E14/blob/master/MessungDiodenkennlinie.svg
 
 
 | $U_{\text{a, soll}} (\si{\volt})$ | $U_{\text{Tr}} (\si{\volt})$ | $C_L (\si{\micro\farad})$ | $R_S (\Omega)$ |
