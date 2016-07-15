@@ -1,7 +1,7 @@
 Package: siunitx
 Tex Header: \sisetup{output-decimal-marker = {,}} 
 Title         : E12 - E14
-Author        : Gerald Rapior
+Author        : 
 Logo          : True
 
 [TITLE]
@@ -12,7 +12,7 @@ Schaltplan zur Messung der Diodenkennlinien verändert.
 
 ![MessDiodenkennlinie]
 
-[MessDiodenkennlinie]:  https://github.com/grumpyfogey/E12-E14/blob/master/MessungDiodenkennlinie.svg
+[MessDiodenkennlinie]: https://github.com/grumpyfogey/E12-E14/blob/master/MessungDiodenkennlinie.pdf
 
 
 | $U_{\text{a, soll}} (\si{\volt})$ | $U_{\text{Tr}} (\si{\volt})$ | $C_L (\si{\micro\farad})$ | $R_S (\Omega)$ |
@@ -22,8 +22,4 @@ Schaltplan zur Messung der Diodenkennlinien verändert.
 | 14                  | 12,24          | 400   | 12       |
 | 12                  | 11,18          | 800   | 11       |
 | 10                  | 9,1            | 500   | 9        |
-
-Test
-
-Test2
 
