@@ -1,3 +1,5 @@
+Math Latex: lualatex
+Dvisvg: C:\Users\gerald\Downloads\dvisvgm-1.16-win32\dvisvgm.exe
 Package: siunitx
 Tex Header: \sisetup{output-decimal-marker = {,}} 
 Title         : E12 - E14
@@ -12,14 +14,38 @@ Schaltplan zur Messung der Diodenkennlinien verändert.
 
 ![MessDiodenkennlinie]
 
-[MessDiodenkennlinie]: https://github.com/grumpyfogey/E12-E14/blob/master/MessungDiodenkennlinie.svg
+Der Strom wird über den Widerstand $R_I$ bestimmt und die Spannung der UI-Kennlinie über der Diode **und** dem Widerstand $R_I$ zusammen.
 
 
-| $U_{\text{a, soll}} (\si{\volt})$ | $U_{\text{Tr}} (\si{\volt})$ | $C_L (\si{\micro\farad})$ | $R_S (\Omega)$ |
-+:--------------------+:---------------+:------+:---------+
-| 18                  | 15,5           | 400   | 15 -16   |
-| 16                  | 13,63          | 300   | 14       |
-| 14                  | 12,24          | 400   | 12       |
-| 12                  | 11,18          | 800   | 11       |
-| 10                  | 9,1            | 500   | 9        |
+![Diodenkennlinien]
+
+Es wurden hier 2 Messungen verglichen. Einmal (rote Kurve) wurde die Kennlinie einer 1N4148-Diode so aufgenommen, wie im Anleitungsheft beschrieben steht. Bei der grünen Kurve wurde noch zwischen dem Funktionsgenerator und dem Rest der Schaltung ein Trenntrafo eingebaut. Nun kann der Widerstand $R_I = \SI{10}{\ohm}$ weggelassen und der Strom direkt über $R_V$ gemessen werden. (Eine der Spannungen ist zu invertieren). Der Punkt zwischen Widerstand und Diode ist nun der gemeinsame Abgriff. Die Masse / Erde fällt weg.
+
+Sehr auffällig ist die unterschiedliche Steigung der Kennlinie im Durchlassbereich. Die rote Kurve hat schätzungsweise einen inkrementellen Widerstand von $\SI{16}{\ohm}$ und die grüne Kurve einen von $\SI{2.5}{\ohm}$. Dabei ist der kleinere der beiden Werte durchaus glaubhaft. Nun fallen an der Diode "immer" die berühmten $\SI{0.7}{\volt}$ ab. Der Funktionsgenerator erzeugt aber bis zu $U_{\text{FG,max}} = \SI{10}{\volt}$. So fallen am Widerstand $R_I$ bis zu $\SI{1}{\volt}$ ab. Die sieht man auch an der angedehnten rechten Seite von der roten Kurve. Der Strom ist davon nicht betroffen. Daher der kleinere Anstieg. Den Versatz von ca. $\SI{0.2}{\volt}$ bei der Durchlassspannung kann ich mir allerdings nicht erklären.
+
+Hier 2 Beispiele in denen die Diodenkennlinien nicht so richtig gut gemessen wurden:
+
+![MessDiodeAC]
+
+Die Kennlinie hat den richtigen Verlauf, aber auf beiden Achsen verschoben. Es ist z.B. die Schwellspannung nicht ablesbar.
+
+![MessDiodeFalscherWiderstand]
+
+Der Anstieg bei den Schwell- sowie Durchbruchspannungen ist viel zu flach. Der Kleinsignalwiderstand ist weit über $\SI{100}{\ohm}$. Wahrscheinlich wurde die Diodenspannung über dem großen Widerstand $R_V$ gemessen.
+
+
+
+[MessDiodenkennlinie]: ./MessungDiodenkennlinie.[svg,pdf] "Aufbau zur Messung der Diodenkennlinien"
+[Diodenkennlinien]: ./Diodenkennlinien.svg
+[MessDiodeAC]: ./160422-Diodenkennlinie.png
+[MessDiodeFalscherWiderstand]: ./160714-ZDiodenkennlnie.png
+
+
+| $U_{\text{a, soll}} (\si{\volt})$ | $U_{\text{Tr}} (\si{\volt})$ | $C_L (\si{\micro\farad})$ | $R_S (\si{\ohm})$ |
++:----------------------------------+:-----------------------------+:-----------------------+:---------------+
+| 18                                | 15,5                         | 400                    | 15 -16         |  
+| 16                                | 13,63                        | 300                    | 14             |
+| 14                                | 12,24                        | 400                    | 12             |
+| 12                                | 11,18                        | 800                    | 11             |
+| 10                                | 9,1                          | 500                    | 9              |
 
